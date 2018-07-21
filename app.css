@@ -146,6 +146,7 @@ html, body {
     margin-right: 15px;
     flex-shrink: 0;
     border-radius: 50%;
+    background: #ccc;
 }
 
 .profile {
