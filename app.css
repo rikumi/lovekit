@@ -1,0 +1,213 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-size: 14px;
+  line-height: 1.75em;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+#app {
+  display: none;
+}
+
+.intro, .show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: #fff;
+}
+
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+@keyframes slogan {
+  0% {
+    content: '_';
+  }
+  15% {
+    content: '寻_';
+  }
+  30% {
+    content: '寻找_';
+  }
+  45% {
+    content: '寻找迷_';
+  }
+  60% {
+    content: '寻找迷失_';
+  }
+  75% {
+    content: '寻找迷失的_';
+  }
+  90% {
+    content: '寻找迷失的你_';
+  }
+}
+
+@-webkit-keyframes slogan {
+  0% {
+    content: '_';
+  }
+  15% {
+    content: '寻_';
+  }
+  30% {
+    content: '寻找_';
+  }
+  45% {
+    content: '寻找迷_';
+  }
+  60% {
+    content: '寻找迷失_';
+  }
+  75% {
+    content: '寻找迷失的_';
+  }
+  90% {
+    content: '寻找迷失的你_';
+  }
+}
+
+.slogan::after {
+  content: '寻找迷失的你_';
+  animation-name: slogan;
+  -webkit-animation-name: slogan;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+}
+
+.loading, .error, .login {
+  margin-top: 40px;
+  height: 40px;
+}
+
+.error-desc {
+  color: #888;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login, .logout {
+  border: 0 none;
+  background: #eee;
+  padding: 5px 15px;
+  line-height: 32px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.login:hover, .logout:hover {
+  background: #ddd;
+}
+
+.login:active, .logout:active {
+  background: #ccc;
+  color: inherit;
+}
+
+.friend {
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 2px;
+}
+
+.friend:hover {
+    border-color: #2af;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+.line-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.name {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #333;
+    flex: 0 0 auto;
+    min-width: 0%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.id {
+    font-size: 12px;
+    color: #888;
+    margin-right: 5px;
+    flex: 1 1 auto;
+    min-width: 0%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.forgotten {
+    flex: 0 0 auto;
+    font-size: 13px;
+}
+
+.bio {
+    font-size: 13px;
+    line-height: 1.6em;
+    color: #555;
+    text-align: justify;
+}
+
+.empty {
+  margin: 30px 0;
+}
+
+.message {
+  font-size: 22px;
+}
+
+.foot {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.credit {
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+}

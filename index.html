@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="app.css"/>
+    <title>LoveKit丨寻找迷失的你</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="app" :style="{ display: 'block' }">
+      <div class="intro" v-if="!isLogin">
+        <div class="title">LoveKit</div>
+        <div class="slogan">&nbsp;</div>
+        <div class="loading" v-if="loading">…</div>
+        <div class="error" v-if="error">出现错误，请稍后再试</div>
+        <button class="login" v-if="redirectUrl" @click.stop="location.href = redirectUrl">Twitter 登录</button>
+      </div>
+      <div class="show" v-else>
+        <div class="loading" v-if="loading">获取中…</div>
+        <div class="error" v-if="error">获取失败，请稍后再试</div>
+        <div class="error-desc" v-if="error">注：Twitter 限制每用户 15 分钟内累计不得超过 15 次调用；每关注 200 个朋友将产生一次调用。</div>
+        <button class="logout" v-if="error" @click.stop="location.search = ''">重新登录</button>
+        <div class="list" v-if="friends && friends.length">
+          <div class="friend" v-for="friend in friends" @click="window.open('https://twitter.com/' + friend.screen_name, '_blank')">
+            <img class="avatar" :src="friend.profile_image_url_https"/>
+            <div class="profile">
+              <div class="line-1">
+                <div class="name">{{ friend.name }}</div>
+                <div class="id">@{{ friend.screen_name }}</div>
+                <div class="forgotten">已迷失 {{ friend.forgotten_days }} 天</div>
+              </div>
+              <div class="line-2">
+                <div class="bio">{{ friend.description }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="foot">「だから、どこにも行かないで」</div>
+          <div class="credit">Made with Love by @rikumichan.</div>
+        </div>
+        <div class="empty" v-if="friends && !friends.length">
+          <div class="message">你的朋友们都很好</div>
+          <div class="message-desc">在你的朋友中没有找到最近两周不活跃的用户。</div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
