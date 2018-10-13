@@ -103,6 +103,8 @@ button:focus {
 }
 
 button {
+  -webkit-appearance: none;
+  display: block;
   border: 0 none;
   padding: 8px 0;
   margin-left: 15px;
