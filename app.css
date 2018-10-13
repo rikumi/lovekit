@@ -121,7 +121,7 @@ button:active {
 }
 
 .title-bar {
-  padding: 30px 15px 0;
+  padding: 30px 15px 5px;
   border-bottom: 0.5px solid #ddd;
   font-size: 26px;
   background: #f3f3f3;
