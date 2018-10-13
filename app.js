@@ -34,7 +34,7 @@ var app = new Vue({
           app.loading = false
           app.error = true
         })
-        history.replaceState({}, null, 'https://rikumi.github.io/lovekit/')
+        // history.replaceState({}, null, 'https://rikumi.github.io/lovekit/')
       }
     }
   }

@@ -10,8 +10,8 @@
   </head>
   <body>
     <div id="app" :style="{ display: 'block' }">
+      <div class="title-bar">LoveKit</div>
       <div class="intro" v-if="!isLogin">
-        <div class="title">LoveKit</div>
         <div class="slogan">&nbsp;</div>
         <div class="loading" v-if="loading">…</div>
         <div class="error" v-if="error">出现错误，请稍后再试</div>
