@@ -6,9 +6,10 @@ body {
 }
 
 * {
-  font-size: 13px;
-  line-height: 1.75em;
+  font-size: 14px;
+  line-height: 1.5em;
   font-family: sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus {
@@ -24,13 +25,13 @@ button:focus {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 .slogan {
-  padding: 7px 0;
+  padding: 8px 0;
   margin-left: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 @keyframes slogan {
@@ -94,16 +95,16 @@ button:focus {
 }
 
 .cell {
-  padding: 7px 0;
+  padding: 8px 15px 8px 0;
   margin-left: 15px;
   text-align: left;
-  color: #777;
-  border-bottom: 1px solid #eee;
+  color: #555;
+  border-bottom: 1px solid #ddd;
 }
 
 button {
   border: 0 none;
-  padding: 7px 0;
+  padding: 8px 0;
   margin-left: 15px;
   text-align: left;
   cursor: pointer;
@@ -119,7 +120,7 @@ button:active {
 
 .title-bar {
   padding: 30px 15px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
   font-size: 26px;
   background: #f3f3f3;
   position: relative;
@@ -127,7 +128,7 @@ button:active {
 }
 
 .friend {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
   padding: 10px 20px 10px 0;
   margin-left: 15px;
   display: flex;
@@ -203,17 +204,8 @@ button:active {
 
 .bio {
   font-size: 13px;
-  line-height: 1.6em;
   color: #555;
   text-align: justify;
-}
-
-.empty {
-  margin: 30px 0;
-}
-
-.message {
-  font-size: 22px;
 }
 
 .foot {

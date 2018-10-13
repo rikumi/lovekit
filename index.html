@@ -39,10 +39,8 @@
           <div class="foot">「だから、どこにも行かないで」</div>
           <div class="credit">Made with Love by @rikumichan.</div>
         </div>
-        <div class="empty" v-if="friends && !friends.length">
-          <div class="message">你的朋友们都很好</div>
-          <div class="message-desc">在你的朋友中没有找到最近两周不活跃的用户。</div>
-        </div>
+        <div class="cell" v-if="friends && !friends.length">你的朋友们都很好</div>
+        <div class="cell" v-if="friends && !friends.length">在你的朋友中没有找到最近两周不活跃的用户。</div>
       </div>
     </div>
     <script src="app.js"></script>
