@@ -16,7 +16,7 @@ var app = new Vue({
   methods: {
     initRedirectUrl: function () {
       if (!this.isLogin) {
-        axios.get('https://rikumi.lib.id/lovekit/').then(function (res) {
+        axios.get('https://rikumi.api.stdlib.com/lovekit/').then(function (res) {
           app.loading = false
           app.redirectUrl = res.data
         }).catch(function () {
@@ -27,7 +27,7 @@ var app = new Vue({
     },
     initFriends: function () {
       if (this.isLogin) {
-        axios.get('https://rikumi.lib.id/lovekit/' + location.search).then(function (res) {
+        axios.get('https://rikumi.api.stdlib.com/lovekit/' + location.search).then(function (res) {
           app.loading = false
           app.friends = res.data
         }).catch(function () {
